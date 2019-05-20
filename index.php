@@ -4,7 +4,10 @@
  */
 
 if(isset($_GET['a_id']) && !empty($_GET['a_id']) && isset($_GET['c_id']) && !empty($_GET['c_id'])){
-	$source = 'https://admin.applicaster.com/v12/accounts/'.$_GET['a_id'].'/channels/'.$_GET['c_id'].'/programs.json';
+	$a_id = $_GET['a_id'];
+	$c_id = $_GET['c_id'];
+	$schedules_link = 'http://admin.applicaster.com/accounts/'.$a_id.'/channels/'.$c_id.'/programs';
+	$source = 'https://admin.applicaster.com/v12/accounts/'.$a_id.'/channels/'.$c_id.'/programs.json';
 	$data = json_decode(@file_get_contents('http://199.203.217.171/proxy/?source='.urlencode($source)), TRUE);
 	$schedules = array();
 
@@ -64,14 +67,11 @@ function getTheDate($string){
 
 		<title>Epg Reshet</title>
 
-		<link type="text/css" rel="stylesheet" href="./css/style.css">
-
+		<link type="text/css" rel="stylesheet" href="./css/style.css?1">
 		
 		<style>
-			html, body{font-family: 'NovemberHebrew', sans-serif;}
 			<?php if(isset($_GET['fullview']) && !empty($_GET['fullview']) && $_GET['fullview'] == 'true'): ?>
-			#video-wrapper,
-			#broadcast-schedule-link{display: flex;}
+			#wrapper{max-width: initial;}
 			<?php endif; ?>
 		</style>
 
@@ -87,9 +87,6 @@ function getTheDate($string){
 	<body onload="appReady();">
 
 		<div id="wrapper">
-			<div class="section" id="video-wrapper">
-				<video id="video" autoplay controls></video>
-			</div>
 			<div class="section" id="epg-ticker">
 				<?php if(isset($schedules) && !empty($schedules)): ?>
 
@@ -115,7 +112,7 @@ function getTheDate($string){
 				<?php endif; ?>
 			</div>
 			<div class="section" id="broadcast-schedule-link">
-				<a href="https://www.google.co.il/" target="_self" title="עבור ללוח השידורים">ללוח השידורים</a>
+				<a href="<?php echo $schedules_link; ?>" target="_self" title="עבור ללוח השידורים">ללוח השידורים</a>
 			</div>
 		</div>
 		<script type="text/javascript" src="./js/jquery.js"></script>
