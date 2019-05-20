@@ -1,0 +1,23 @@
+/*
+ * Author: Anton Manukov;
+ */
+
+/*** NovemberHebrew ***/
+@font-face{
+    font-family: 'NovemberHebrew';
+    font-style: normal;
+    font-weight: 400;
+    src: url('NovemberHebrew/NovemberHebrew-Regular.eot'); 
+    src: url('NovemberHebrew/NovemberHebrew-Regular.eot?#iefix') format('embedded-opentype'), 
+         url('NovemberHebrew/NovemberHebrew-Regular.ttf') format('truetype'), 
+         url('NovemberHebrew/NovemberHebrew-Regular.woff') format('woff');
+}
+@font-face{
+    font-family: 'NovemberHebrew';
+    font-style: bold;
+    font-weight: 700;
+    src: url('NovemberHebrew/NovemberHebrew-Bold.eot'); 
+    src: url('NovemberHebrew/NovemberHebrew-Bold.eot?#iefix') format('embedded-opentype'), 
+         url('NovemberHebrew/NovemberHebrew-Bold.ttf') format('truetype'), 
+         url('NovemberHebrew/NovemberHebrew-Bold.woff') format('woff');
+}
