@@ -103,7 +103,7 @@ p{
 p span{
     position: relative;
     display: block;
-    padding: 1px 5px;
+    padding: 1px 0px;
     top: 0;
     left: 0;
     min-width: 10px;
@@ -111,6 +111,7 @@ p span{
     overflow: hidden;
 }
 p span.program-expectation{
+	padding: 1px 5px;
     background-color: #50e3c2;
     font-weight: 400;
     color: #343434;
