@@ -67,7 +67,7 @@ function getTheDate($string){
 
 		<title>Epg Reshet</title>
 
-		<link type="text/css" rel="stylesheet" href="./css/style.css?4">
+		<link type="text/css" rel="stylesheet" href="./css/style.css?10">
 		
 		<style>
 			<?php if(isset($_GET['fullview']) && !empty($_GET['fullview']) && $_GET['fullview'] == 'true'): ?>
@@ -81,6 +81,7 @@ function getTheDate($string){
 					$('#wrapper').animate({opacity: 1}, 400);
 				}, 150);
 			}
+			document.addEventListener("touchstart", function() {},false);
         </script>
 	</head>
 
