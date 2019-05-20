@@ -6,7 +6,7 @@
 if(isset($_GET['a_id']) && !empty($_GET['a_id']) && isset($_GET['c_id']) && !empty($_GET['c_id'])){
 	$a_id = $_GET['a_id'];
 	$c_id = $_GET['c_id'];
-	$schedules_link = 'http://admin.applicaster.com/accounts/'.$a_id.'/channels/'.$c_id.'/programs';
+	$schedules_link = '//admin.applicaster.com/accounts/'.$a_id.'/channels/'.$c_id.'/programs';
 	$source = 'https://admin.applicaster.com/v12/accounts/'.$a_id.'/channels/'.$c_id.'/programs.json';
 	$data = json_decode(@file_get_contents('http://199.203.217.171/proxy/?source='.urlencode($source)), TRUE);
 	$schedules = array();
