@@ -67,7 +67,7 @@ function getTheDate($string){
 
 		<title>Epg Reshet</title>
 
-		<link type="text/css" rel="stylesheet" href="./css/style.css?10">
+		<link type="text/css" rel="stylesheet" href="./css/style.css?15">
 		
 		<style>
 			<?php if(isset($_GET['fullview']) && !empty($_GET['fullview']) && $_GET['fullview'] == 'true'): ?>
